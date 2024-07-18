@@ -162,6 +162,29 @@ body {
   background-color: #a90404;
 }
 
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ff0808;
+}
+
+footer .fa-github {
+  margin-right: 1px;
+}
+
 /* Responsive Media Queries */
 @media (max-width: 768px) {
   #gameboard {
