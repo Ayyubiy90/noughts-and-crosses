@@ -112,14 +112,56 @@ function makeMove(index) {
 }
 
 function makeComputerMove() {
-  let availableMoves = gameboard
-    .map((val, index) => (val === "" ? index : null))
-    .filter((val) => val !== null);
+  let bestScore = -Infinity;
+  let move;
+  for (let i = 0; i < gameboard.length; i++) {
+    if (gameboard[i] === "") {
+      gameboard[i] = computer;
+      let score = minimax(gameboard, 0, false);
+      gameboard[i] = "";
+      if (score > bestScore) {
+        bestScore = score;
+        move = i;
+      }
+    }
+  }
+  makeMove(move);
+}
 
-  if (availableMoves.length > 0) {
-    let move =
-      availableMoves[Math.floor(Math.random() * availableMoves.length)];
-    makeMove(move);
+const scores = {
+  X: -1,
+  O: 1,
+  Tie: 0,
+};
+
+function minimax(board, depth, isMaximizing) {
+  let result = checkWinner();
+  if (result !== null) {
+    return scores[result];
+  }
+
+  if (isMaximizing) {
+    let bestScore = -Infinity;
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === "") {
+        board[i] = computer;
+        let score = minimax(board, depth + 1, false);
+        board[i] = "";
+        bestScore = Math.max(score, bestScore);
+      }
+    }
+    return bestScore;
+  } else {
+    let bestScore = Infinity;
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === "") {
+        board[i] = player;
+        let score = minimax(board, depth + 1, true);
+        board[i] = "";
+        bestScore = Math.min(score, bestScore);
+      }
+    }
+    return bestScore;
   }
 }
 
