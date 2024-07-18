@@ -53,6 +53,30 @@ body {
   gap: 10px;
 }
 
+#player-input input {
+  padding: 15px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin: 5px 0;
+}
+
+#player-input button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#player-input button:hover {
+  background-color: #0056b3;
+}
+
 #controls input,
 #controls button {
   padding: 10px;
