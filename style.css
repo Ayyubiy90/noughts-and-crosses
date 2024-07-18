@@ -98,6 +98,16 @@ body {
   font-weight: bold;
 }
 
+#scores {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#scores div {
+  font-size: 18px;
+}
+
 /* Responsive Media Queries */
 @media (max-width: 768px) {
   #gameboard {

@@ -18,6 +18,10 @@
         </div>
 
         <div id="gameboard-container" class="hidden">
+            <div id="scores">
+                <div>Player: <span id="player-score">0</span></div>
+                <div>Computer: <span id="computer-score">0</span></div>
+            </div>
             <div id="gameboard">
                 <div class="cell" data-index="0"></div>
                 <div class="cell" data-index="1"></div>
@@ -29,7 +33,10 @@
                 <div class="cell" data-index="7"></div>
                 <div class="cell" data-index="8"></div>
             </div>
-            <button id="restart-btn">Restart Game</button>
+            <div id="control-buttons">
+                <button id="restart-btn">Restart Game</button>
+                <button id="new-game-btn">New Game</button>
+            </div>
         </div>
 
         <div id="result"></div>
