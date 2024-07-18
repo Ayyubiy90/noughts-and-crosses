@@ -1,8 +1,3 @@
-Here's an updated README that includes a link to the live version of the game and a section for adding an image preview:
-
-### README.md
-
-```markdown
 # Noughts and Crosses
 
 A responsive Noughts and Crosses (Tic-Tac-Toe) game where you can play against the computer. Enter your name to start the game, play, and see your scores update as you win or lose. The game is designed to be challenging and works seamlessly on various devices.
