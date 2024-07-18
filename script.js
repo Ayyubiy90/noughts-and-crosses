@@ -85,9 +85,17 @@ function makeMove(index) {
     const winner = checkWinner();
 
     if (winner) {
-      document.getElementById("result").textContent =
-        winner === "Tie" ? "It's a tie!" : `${winner} wins!`;
-      updateScore(winner);
+      if (winner === "Tie") {
+        document.getElementById("result").textContent = `It's a tie!`;
+      } else if (winner === player) {
+        document.getElementById(
+          "result"
+        ).textContent = `${playerName} (X) wins!`;
+        updateScore(player);
+      } else {
+        document.getElementById("result").textContent = `Computer (O) wins!`;
+        updateScore(computer);
+      }
     } else {
       currentPlayer = currentPlayer === player ? computer : player;
       if (currentPlayer === computer) {
