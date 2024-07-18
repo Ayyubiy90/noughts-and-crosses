@@ -1,55 +1,78 @@
+Here's an updated README that includes a link to the live version of the game and a section for adding an image preview:
+
+### README.md
+
+```markdown
 # Noughts and Crosses
 
-Noughts and Crosses (also known as Tic-Tac-Toe) is a classic game where two players take turns marking spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
+A responsive Noughts and Crosses (Tic-Tac-Toe) game where you can play against the computer. Enter your name to start the game, play, and see your scores update as you win or lose. The game is designed to be challenging and works seamlessly on various devices.
 
 ## Features
 
-- **Single Player Mode**: Play against the computer.
-- **Score Tracking**: Keep track of the scores for both the player and the computer.
-- **Responsive Design**: The game is responsive and works well on various devices.
-- **Game Controls**: Start a new game, restart the current game, and view the results.
-- **Name Input**: Player can enter their name before starting the game.
+- Responsive design for different devices
+- Play against the computer
+- Scores tracking
+- Modal display for game results
+- Easy restart and new game functionality
 
-## How to Play
+## Live Demo
 
-1. Enter your name in the input field.
-2. Click the "Start Game" button to begin.
-3. Take turns with the computer to mark the cells on the gameboard.
-4. The game will announce the winner and update the scores.
-5. Click "New Game" to start a new game without resetting scores.
-6. Click "Restart Game" to reset the game and scores.
+Check out the live version of the game here: [Noughts and Crosses](https://noughts-and-crosses-beta.vercel.app/)
 
-## Technologies Used
+## Preview
 
-- **HTML**: Structure of the web page.
-- **CSS**: Styling and layout.
-- **JavaScript**: Game logic and interactions.
+![Game Preview](./img/Screenshot%20(16).png)
+![Game Preview](./img/Screenshot%20(17).png)
+![Game Preview](./img/Screenshot%20(18).png)
 
-## Project Structure
 
-```plaintext
-/
-├── index.html        # Main HTML file
-├── styles.css        # CSS file for styling
-└── script.js         # JavaScript file for game logic
-```
+## Getting Started
 
-## Setup
+To get a local copy up and running follow these simple steps.
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/Ayyubiy90/noughts-and-crosses.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd noughts-and-crosses
-    ```
-3. Open `index.html` in your web browser to play the game.
+### Prerequisites
+
+You need to have the following installed:
+
+- Git
+- A web browser
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Ayyubiy90/noughts-and-crosses.git
+   ```
+2. Open the `index.html` file in your browser
+
+## Usage
+
+- Enter your name and click "Start Game" to begin playing.
+- Click on any cell to make your move.
+- The game will automatically switch turns between you and the computer.
+- The scores will update as you win or lose.
+- Click "New Game" to start a new game without resetting scores.
+- Click "Restart Game" to reset the scores and go back to the name input screen.
 
 ## Contributing
 
-Contributions are welcome! Feel free to submit a pull request or open an issue.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+## Contact
+
+Your Name - [@your_twitter](https://twitter.com/your_twitter) - your_email@example.com
+
+Project Link: [https://github.com/Ayyubiy90/noughts-and-crosses](https://github.com/Ayyubiy90/noughts-and-crosses)
