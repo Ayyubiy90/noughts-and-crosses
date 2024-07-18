@@ -1,57 +1,55 @@
 # Noughts and Crosses
 
-A simple Tic-Tac-Toe game implemented using HTML, CSS, and JavaScript.
-
-## Project Description
-
-This project involves creating a Tic-Tac-Toe game where the gameboard is stored as an array inside a Gameboard object. Players are also stored in objects, and an object controls the flow of the game itself. The goal is to minimize global code by using factories and the module pattern.
+Noughts and Crosses (also known as Tic-Tac-Toe) is a classic game where two players take turns marking spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
 
 ## Features
 
-- Gameboard managed as an array within a Gameboard object
-- Player objects to handle player data
-- Game flow control through a dedicated object
-- Console-based game logic for initial development
-- DOM manipulation for interactive gameplay
-- Logic to detect wins, losses, and ties
-- Player name input, game start/restart, and game result display
-
-## Project Structure
-
-- **index.html**: The main HTML file
-- **style.css**: The CSS file for styling the game
-- **script.js**: The JavaScript file containing game logic
-
-## Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Ayyubiy90/noughts-and-crosses.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd noughts-and-crosses
-   ```
-3. Open `index.html` in your browser to see the game in action.
+- **Single Player Mode**: Play against the computer.
+- **Score Tracking**: Keep track of the scores for both the player and the computer.
+- **Responsive Design**: The game is responsive and works well on various devices.
+- **Game Controls**: Start a new game, restart the current game, and view the results.
+- **Name Input**: Player can enter their name before starting the game.
 
 ## How to Play
 
-1. Enter player names.
-2. Click the "Start Game" button.
-3. Players take turns clicking on the gameboard to place their markers.
-4. The game will announce the winner or a tie once the game ends.
-5. Click the "Restart Game" button to play again.
+1. Enter your name in the input field.
+2. Click the "Start Game" button to begin.
+3. Take turns with the computer to mark the cells on the gameboard.
+4. The game will announce the winner and update the scores.
+5. Click "New Game" to start a new game without resetting scores.
+6. Click "Restart Game" to reset the game and scores.
 
-## Future Enhancements
+## Technologies Used
 
-- Add a scoring system to track multiple rounds.
-- Implement an AI opponent for single-player mode.
-- Improve the user interface with animations and better styling.
+- **HTML**: Structure of the web page.
+- **CSS**: Styling and layout.
+- **JavaScript**: Game logic and interactions.
+
+## Project Structure
+
+```plaintext
+/
+├── index.html        # Main HTML file
+├── styles.css        # CSS file for styling
+└── script.js         # JavaScript file for game logic
+```
+
+## Setup
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Ayyubiy90/noughts-and-crosses.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd noughts-and-crosses
+    ```
+3. Open `index.html` in your web browser to play the game.
 
 ## Contributing
 
-Feel free to submit issues and enhancement requests. Contributions are welcome!
+Contributions are welcome! Feel free to submit a pull request or open an issue.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

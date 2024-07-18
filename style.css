@@ -29,9 +29,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px; /* Add gap between cells */
+  gap: 10px; 
   margin: 20px 0;
-  max-width: 100%; /* Ensure the gameboard fits within the container */
+  max-width: 100%; 
 }
 
 .cell {
@@ -134,7 +134,7 @@ body {
 
 @media (max-width: 480px) {
   #gameboard {
-    gap: 5px; /* Smaller gap on smaller screens */
+    gap: 5px; 
   }
 
   .cell {

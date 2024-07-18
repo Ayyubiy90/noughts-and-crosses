@@ -1,4 +1,3 @@
-// Game state
 let player = "X";
 let computer = "O";
 let currentPlayer = player;
@@ -10,23 +9,20 @@ document.getElementById("start-btn").addEventListener("click", () => {
   playerName = document.getElementById("player").value;
 
   if (playerName) {
-    document.getElementById("player-input").style.display = "none"; // Hide player input and start button
-    document.getElementById("gameboard-container").classList.remove("hidden"); // Show gameboard
+    document.getElementById("player-input").style.display = "none";
+    document.getElementById("gameboard-container").classList.remove("hidden");
 
-    // Update the score display with the player's name
     document.getElementById("player-name").textContent = `${playerName}: `;
   } else {
     alert("Please enter your name.");
   }
 });
 
-// Event listeners for Restart and New Game buttons
 document.getElementById("restart-btn").addEventListener("click", () => {
   resetGame(true);
-  document.getElementById("player-input").style.display = "flex"; // Show player input and start button
-  document.getElementById("gameboard-container").classList.add("hidden"); // Hide gameboard
-  document.getElementById("player").value = ""; // Clear player input
-  // Reset the score display
+  document.getElementById("player-input").style.display = "flex";
+  document.getElementById("gameboard-container").classList.add("hidden");
+  document.getElementById("player").value = "";
   document.getElementById("player-name").textContent = `Player: `;
 });
 
@@ -34,7 +30,6 @@ document.getElementById("new-game-btn").addEventListener("click", () => {
   resetGame(false);
 });
 
-// Reset game function
 function resetGame(resetScores) {
   gameboard = ["", "", "", "", "", "", "", "", ""];
   currentPlayer = player;
@@ -50,7 +45,6 @@ function resetGame(resetScores) {
   }
 }
 
-// Function to check for a win or tie
 function checkWinner() {
   const winPatterns = [
     [0, 1, 2],
@@ -81,7 +75,6 @@ function checkWinner() {
   return null;
 }
 
-// Function to handle player moves
 function makeMove(index) {
   if (!gameboard[index] && !gameOver) {
     gameboard[index] = currentPlayer;
@@ -118,7 +111,6 @@ function makeMove(index) {
   }
 }
 
-// Function to handle computer moves (simple random move for now)
 function makeComputerMove() {
   let availableMoves = gameboard
     .map((val, index) => (val === "" ? index : null))
@@ -131,7 +123,6 @@ function makeComputerMove() {
   }
 }
 
-// Function to update the score
 function updateScore(winner) {
   if (winner === player) {
     let playerScore = document.getElementById("player-score");
@@ -142,7 +133,6 @@ function updateScore(winner) {
   }
 }
 
-// Add event listeners to gameboard cells
 document.querySelectorAll(".cell").forEach((cell) => {
   cell.addEventListener("click", (e) => {
     const index = e.target.getAttribute("data-index");
