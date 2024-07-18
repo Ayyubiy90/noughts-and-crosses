@@ -1,3 +1,4 @@
+// Game state
 let player = "X";
 let computer = "O";
 let currentPlayer = player;
@@ -13,9 +14,7 @@ document.getElementById("start-btn").addEventListener("click", () => {
     document.getElementById("gameboard-container").classList.remove("hidden"); // Show gameboard
 
     // Update the score display with the player's name
-    document.querySelector(
-      "#scores div:first-child"
-    ).textContent = `${playerName}: `;
+    document.getElementById("player-name").textContent = `${playerName}: `;
   } else {
     alert("Please enter your name.");
   }
@@ -28,7 +27,7 @@ document.getElementById("restart-btn").addEventListener("click", () => {
   document.getElementById("gameboard-container").classList.add("hidden"); // Hide gameboard
   document.getElementById("player").value = ""; // Clear player input
   // Reset the score display
-  document.querySelector("#scores div:first-child").textContent = `Player: `;
+  document.getElementById("player-name").textContent = `Player: `;
 });
 
 document.getElementById("new-game-btn").addEventListener("click", () => {
