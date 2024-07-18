@@ -9,9 +9,10 @@ document.getElementById("start-btn").addEventListener("click", () => {
   playerName = document.getElementById("player").value;
 
   if (playerName) {
-    document.getElementById("player-input").style.display = "none";
-    document.getElementById("gameboard-container").classList.remove("hidden");
+    document.getElementById("player-input").style.display = "none"; // Hide player input and start button
+    document.getElementById("gameboard-container").classList.remove("hidden"); // Show gameboard
 
+    // Update the score display with the player's name
     document.getElementById("player-name").textContent = `${playerName}: `;
   } else {
     alert("Please enter your name.");
@@ -20,15 +21,18 @@ document.getElementById("start-btn").addEventListener("click", () => {
 
 document.getElementById("restart-btn").addEventListener("click", () => {
   resetGame(true);
-  document.getElementById("player-input").style.display = "flex";
-  document.getElementById("gameboard-container").classList.add("hidden");
-  document.getElementById("player").value = "";
+  document.getElementById("player-input").style.display = "flex"; // Show player input and start button
+  document.getElementById("gameboard-container").classList.add("hidden"); // Hide gameboard
+  document.getElementById("player").value = ""; // Clear player input
   document.getElementById("player-name").textContent = `Player: `;
 });
 
 document.getElementById("new-game-btn").addEventListener("click", () => {
   resetGame(false);
 });
+
+document.getElementById("modal-ok-btn").addEventListener("click", closeModal);
+document.querySelector(".close-btn").addEventListener("click", closeModal);
 
 function resetGame(resetScores) {
   gameboard = ["", "", "", "", "", "", "", "", ""];
@@ -86,19 +90,14 @@ function makeMove(index) {
     if (winner) {
       gameOver = true;
       if (winner === "Tie") {
-        document.getElementById("result").textContent = `It's a tie!`;
-        alert(`It's a tie!`);
+        showModal(`It's a tie!`);
         resetGame(false);
       } else if (winner === player) {
-        document.getElementById(
-          "result"
-        ).textContent = `${playerName} (X) wins!`;
-        alert(`${playerName} (X) wins!`);
+        showModal(`${playerName} (X) wins!`);
         updateScore(player);
         resetGame(false);
       } else {
-        document.getElementById("result").textContent = `Computer (O) wins!`;
-        alert(`Computer (O) wins!`);
+        showModal(`Computer (O) wins!`);
         updateScore(computer);
         resetGame(false);
       }
@@ -173,6 +172,16 @@ function updateScore(winner) {
     let computerScore = document.getElementById("computer-score");
     computerScore.textContent = parseInt(computerScore.textContent) + 1;
   }
+}
+
+function showModal(message) {
+  document.getElementById("modal-result").textContent = message;
+  document.getElementById("result-modal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("result-modal").style.display = "none";
+  resetGame(false);
 }
 
 document.querySelectorAll(".cell").forEach((cell) => {
