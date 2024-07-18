@@ -4,6 +4,9 @@ document.getElementById("start-btn").addEventListener("click", () => {
   if (playerName) {
     document.getElementById("player-input").style.display = "none"; // Hide player input and start button
     document.getElementById("gameboard-container").classList.remove("hidden"); // Show gameboard
+
+    // Update the score display with the player's name
+    document.querySelector("#scores div").textContent = `${playerName}: `;
   } else {
     alert("Please enter your name.");
   }
@@ -19,6 +22,8 @@ document.getElementById("new-game-btn").addEventListener("click", () => {
   document.getElementById("player-input").style.display = "flex"; // Show player input and start button
   document.getElementById("gameboard-container").classList.add("hidden"); // Hide gameboard
   document.getElementById("player").value = ""; // Clear player input
+  // Reset the score display
+  document.querySelector("#scores div").textContent = `Player: `;
 });
 
 // Function to reset the game (implement as needed)
