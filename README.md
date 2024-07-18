@@ -65,9 +65,3 @@ Don't forget to give the project a star! Thanks again!
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - your_email@example.com
-
-Project Link: [https://github.com/Ayyubiy90/noughts-and-crosses](https://github.com/Ayyubiy90/noughts-and-crosses)
